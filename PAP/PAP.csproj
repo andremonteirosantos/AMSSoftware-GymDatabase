@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06AE204A-B26A-47A5-9FD7-A5739F7CDDD6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PAP</RootNamespace>
+    <AssemblyName>PAP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icone-Red-2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.3.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AvaliacoesFisicas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AvaliacoesFisicas.Designer.cs">
+      <DependentUpon>AvaliacoesFisicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estatísca_Geral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Estatísca_Geral.Designer.cs">
+      <DependentUpon>Estatísca_Geral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="estatística2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estatística2.Designer.cs">
+      <DependentUpon>estatística2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdministrador.Designer.cs">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAulas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAulas.Designer.cs">
+      <DependentUpon>FrmAulas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAvaliacaoFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAvaliacaoFisica.Designer.cs">
+      <DependentUpon>FrmAvaliacaoFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFatura.Designer.cs">
+      <DependentUpon>frmFatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGerirAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGerirAula.Designer.cs">
+      <DependentUpon>FrmGerirAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHistorico.Designer.cs">
+      <DependentUpon>FrmHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInscricoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInscricoes.Designer.cs">
+      <DependentUpon>FrmInscricoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModalidades.Designer.cs">
+      <DependentUpon>FrmModalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPlanosdeTreino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlanosdeTreino.Designer.cs">
+      <DependentUpon>FrmPlanosdeTreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProdutos.Designer.cs">
+      <DependentUpon>FrmProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Produtos.Designer.cs">
+      <DependentUpon>Produtos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSecretario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSecretario.Designer.cs">
+      <DependentUpon>FrmSecretario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInserirCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInserirCliente.Designer.cs">
+      <DependentUpon>FrmInserirCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInserirFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInserirFuncionario.Designer.cs">
+      <DependentUpon>FrmInserirFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTreinador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTreinador.Designer.cs">
+      <DependentUpon>FrmTreinador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InserirCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InserirCliente.Designer.cs">
+      <DependentUpon>InserirCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InserirFuncionarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InserirFuncionarios.Designer.cs">
+      <DependentUpon>InserirFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loja.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Loja.Designer.cs">
+      <DependentUpon>Loja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapadeAulas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MapadeAulas.Designer.cs">
+      <DependentUpon>MapadeAulas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAPDataSet.cs">
+      <DependentUpon>PAPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PAPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PAPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PlanosdeTreino.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlanosdeTreino.Designer.cs">
+      <DependentUpon>PlanosdeTreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TabelasdeRecomendacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabelasdeRecomendacao.Designer.cs">
+      <DependentUpon>TabelasdeRecomendacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teste.Designer.cs">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AvaliacoesFisicas.resx">
+      <DependentUpon>AvaliacoesFisicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estatísca_Geral.resx">
+      <DependentUpon>Estatísca_Geral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="estatística2.resx">
+      <DependentUpon>estatística2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdministrador.resx">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAulas.resx">
+      <DependentUpon>FrmAulas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAvaliacaoFisica.resx">
+      <DependentUpon>FrmAvaliacaoFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFatura.resx">
+      <DependentUpon>frmFatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGerirAula.resx">
+      <DependentUpon>FrmGerirAula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHistorico.resx">
+      <DependentUpon>FrmHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInscricoes.resx">
+      <DependentUpon>FrmInscricoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModalidades.resx">
+      <DependentUpon>FrmModalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlanosdeTreino.resx">
+      <DependentUpon>FrmPlanosdeTreino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProdutos.resx">
+      <DependentUpon>FrmProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos.resx">
+      <DependentUpon>Produtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSecretario.resx">
+      <DependentUpon>FrmSecretario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInserirCliente.resx">
+      <DependentUpon>FrmInserirCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInserirFuncionario.resx">
+      <DependentUpon>FrmInserirFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTreinador.resx">
+      <DependentUpon>FrmTreinador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InserirCliente.resx">
+      <DependentUpon>InserirCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InserirFuncionarios.resx">
+      <DependentUpon>InserirFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loja.resx">
+      <DependentUpon>Loja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapadeAulas.resx">
+      <DependentUpon>MapadeAulas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanosdeTreino.resx">
+      <DependentUpon>PlanosdeTreino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="TabelasdeRecomendacao.resx">
+      <DependentUpon>TabelasdeRecomendacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teste.resx">
+      <DependentUpon>Teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PAPDataSet.xsc">
+      <DependentUpon>PAPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PAPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PAPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PAPDataSet.xss">
+      <DependentUpon>PAPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-barbell-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a05dd5a0ebfe511aaab98e92b2146855.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-unlock-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-V3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-V3-Big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-under-construction-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-V3-Big-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-info-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-info-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-info-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d096245a06688d8ab364a29f0cc5686b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\517-Fixes-for-Indoor-Cycling-Seat-Pain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pilates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidroginastica271055.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodypump-lp-hormonal-research-960x540.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardio-kixkbocingggg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxing-fitness-classes-dublin-2-underdog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gastos_natacao_descontar_irs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aula-de-zumba-fitness.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transferir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6e08ef88389ce0c5e5faad9e4a666dd1-754x394.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-downward-arrow-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icone-Red-2.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\icons8-exit-32.png" />
+    <None Include="Resources\Logo-V3-RED.png" />
+    <None Include="Resources\Logo-V3-Big-RED.png" />
+    <None Include="Resources\icons8-exit-241.png" />
+    <None Include="Resources\icons8-help-24.png" />
+    <None Include="Resources\tabela-imc.png" />
+    <None Include="Resources\icons8-cancel-241.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
